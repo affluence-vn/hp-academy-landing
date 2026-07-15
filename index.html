@@ -39,7 +39,8 @@
     display: flex; align-items: center; justify-content: space-between;
     padding: 14px 20px; max-width: 1080px; margin: 0 auto;
   }
-  .brand { font-weight: 800; letter-spacing: 2px; font-size: 1.15rem; color: var(--charcoal); }
+  .brand { display: flex; align-items: center; gap: 8px; font-weight: 800; letter-spacing: 2px; font-size: 1.15rem; color: var(--charcoal); }
+  .brand img { height: 30px; width: 30px; object-fit: contain; }
   .brand span { color: var(--accent); }
   nav.menu { display: flex; gap: 22px; flex-wrap: wrap; }
   nav.menu a {
@@ -139,8 +140,13 @@
 
   /* ---------- Testimonials ---------- */
   .testimonials { background: #fff; }
-  .testimonials .grid { grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); }
+  .testimonials .grid {
+    display: flex; flex-wrap: wrap;
+    justify-content: center;
+    gap: 22px;
+  }
   .testimonial-card {
+    flex: 1 1 220px; max-width: 240px;
     border-radius: var(--radius);
     overflow: hidden;
     box-shadow: 0 4px 18px rgba(0,0,0,.08);
@@ -338,7 +344,7 @@
 
 <header>
   <div class="nav">
-    <div class="brand">HP <span>·</span> ACADEMY</div>
+    <div class="brand"><img src="hp-icon.png" alt="HP Academy">HP <span>·</span> ACADEMY</div>
     <nav class="menu">
       <a href="#khoa-hoc">Khóa học</a>
       <a href="#khac-biet">Nổi bật</a>
