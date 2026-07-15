@@ -136,6 +136,22 @@
     color: var(--charcoal); margin-top: 6px;
   }
 
+  /* ---------- Testimonials ---------- */
+  .testimonials { background: #fff; }
+  .testimonials .grid { grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); }
+  .testimonial-card {
+    border-radius: var(--radius);
+    overflow: hidden;
+    box-shadow: 0 4px 18px rgba(0,0,0,.08);
+    aspect-ratio: 1 / 1;
+    position: relative;
+    background: var(--bg-alt);
+  }
+  .testimonial-card img {
+    width: 100%; height: 100%;
+    object-fit: cover; display: block;
+  }
+
   /* ---------- Courses ---------- */
   .courses { background: var(--bg-alt); }
   .grid {
@@ -332,6 +348,7 @@
       <a href="#khoa-hoc">Khóa học</a>
       <a href="#khac-biet">Nổi bật</a>
       <a href="#dang-ky">Đăng ký</a>
+      <a href="#cam-nhan">Cảm nhận</a>
       <a href="#lien-he">Liên hệ</a>
     </nav>
   </div>
@@ -410,6 +427,23 @@
         <p style="margin-top:10px;">Cần tư vấn ngay? <a href="https://zalo.me/0869688153" target="_blank" rel="noopener" style="color:var(--accent-dark); font-weight:700;">Nhắn Zalo Ms. Uyên</a></p>
       </div>
     </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ TESTIMONIALS ============ -->
+<section class="testimonials" id="cam-nhan">
+  <div class="container">
+    <div class="section-head">
+      <div class="kicker">#Với_Bạn_HP_Là...</div>
+      <h2>Cảm nhận học viên</h2>
+    </div>
+    <div class="grid">
+      <div class="testimonial-card"><img src="testimonials/testimonial-1.jpg" loading="lazy" alt="Cảm nhận học viên HP Academy: Thỏ cảm thấy câu nói HP là nhà quá đúng luôn"></div>
+      <div class="testimonial-card"><img src="testimonials/testimonial-2.jpg" loading="lazy" alt="Cảm nhận học viên HP Academy: nhờ vào sự tận tình của các thầy cô, việc học không quá ngộp và không hề áp lực"></div>
+      <div class="testimonial-card"><img src="testimonials/testimonial-3.jpg" loading="lazy" alt="Cảm nhận học viên HP Academy: học ở đây có cảm giác gần gũi, thân thiện vui vẻ đúng theo quan điểm HP là nhà"></div>
+      <div class="testimonial-card"><img src="testimonials/testimonial-4.jpg" loading="lazy" alt="Cảm nhận học viên HP Academy: HP Hub là nơi mình tin tưởng để mở ra cho bản thân một cánh cửa mới"></div>
+      <div class="testimonial-card"><img src="testimonials/testimonial-5.jpg" loading="lazy" alt="Cảm nhận học viên HP Academy: nơi đây không có khoảng cách giữa học viên và giảng viên, HP chính là nhà"></div>
     </div>
   </div>
 </section>
