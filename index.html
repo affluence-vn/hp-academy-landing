@@ -582,8 +582,9 @@
 
 <script>
   // Gửi đăng ký ngầm vào Google Form "Đăng ký khóa học — HP Academy"
+  var CLIENT = 'hpacademy';
   var GFORM = {
-    action: 'https://docs.google.com/forms/d/e/1FAIpQLSftKut1EgO1WukoG3CkYOdhKzBdEzy0d6GxUbMashYIUA2eIQ/formResponse',
+    action: 'https://script.google.com/macros/s/AKfycbzGsRtSIzAHBPjuWWGrtaoNoChTBQm57FolpeP4jTMVaZ9IHPx8LEurANO2TolaIEvW/exec',
     map: {
       'ho_ten': 'entry.223162150',
       'dien_thoai': 'entry.1897688854',
@@ -614,9 +615,10 @@
     }
 
     const src = new FormData(form);
-    const body = new FormData();
+    const body = new URLSearchParams();
+    body.append('client', CLIENT);
     Object.keys(GFORM.map).forEach((name) => {
-      body.append(GFORM.map[name], src.get(name) || '');
+      body.append(name, src.get(name) || '');
     });
 
     fetch(GFORM.action, { method: 'POST', mode: 'no-cors', body: body })
